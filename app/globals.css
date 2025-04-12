@@ -14,13 +14,25 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #93f9b9;
+    --foreground: #000000;
   }
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 body {
-  background: var(--background);
+  /* background: var(--background); */
+  background: linear-gradient(to bottom, #1D976C, #93F9B9);
+  background-repeat: no-repeat;
+  background-size: 100% 100%; /* Ensures it covers the whole page */
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.hover-border-orange {
+  @apply hover:border-b-2 hover:border-orange-500;
 }
